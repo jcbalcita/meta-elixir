@@ -1,5 +1,4 @@
 defmodule MacroOne do
-
   defmacro unless(expression, do: block) do
     quote do
       case unquote(expression) do
@@ -12,5 +11,4 @@ defmodule MacroOne do
   defmacro raw(expression) do
     Macro.escape(expression)
   end
-
 end
