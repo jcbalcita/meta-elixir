@@ -13,4 +13,24 @@ defmodule Assertion do
       Assertion.Test.assert(unquote(operator), unquote(lhs), unquote(rhs))
     end
   end
+
+  defmodule Assertion.Test do
+    def assert(:==, lhs, rhs) when lhs == rhs, do: IO.write "."
+    def assert(:==, lhs, rhs) do
+      IO.puts """
+      FAILURE:
+        Expected:       #{lhs}
+        to be equal to: #{rhs}
+      """
+    end
+
+    def assert(:>, lhs, rhs) when lhs > rhs, do: IO.write "."
+    def assert(:>, lhs, rhs) do
+      IO.puts """
+      FAILURE:
+        Expected:           #{lhs}
+        to be greater than: #{rhs}
+      """
+    end
+  end
 end
