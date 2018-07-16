@@ -682,4 +682,4 @@ application/yin+xml	.yin
 application/vnd.zul	.zir
 application/zip	.zip
 application/vnd.handheld-entertainment+xml	.zmm
-application/vnd.zzazz.deck+xml .zaz
+application/vnd.zzazz.deck+xml	.zaz
